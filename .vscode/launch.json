@@ -1,0 +1,116 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug cc2340r53.elf jlink jlinkgdbserver",
+            "cwd": "${workspaceFolder}",
+            "executable": "ti_ble.first_stage_bootloader_cc23xx.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "device": "CC2340R53",
+            "deviceName": "CC2340R53",
+            "servertype": "jlink",
+            "serialNumber": "853003236",
+            // "serialNumber": "853000761",
+            "serverpath": "/opt/segger/jlink/JLinkGDBServer",
+            // "runToEntryPoint": "main",
+            "breakAfterReset": true,
+            "showDevDebugOutput": "raw",
+            // "rttConfig": {
+            //   "enabled": true,
+            //   "address": "auto",
+            //   "decoders": [
+            //     {
+            //       "port": 0,
+            //       "type": "console"
+            //     }
+            //   ]
+            // },
+            // "rtos": "FreeRTOS"
+        },
+        {
+            "name": "Debug cc2340r53.hex jlink jlinkgdbserver",
+            "cwd": "${workspaceFolder}",
+            "executable": "ti_ble.first_stage_bootloader_cc23xx.hex",
+            "request": "launch",
+            "type": "cortex-debug",
+            "device": "CC2340R53",
+            "deviceName": "CC2340R53",
+            "servertype": "jlink",
+            "serialNumber": "853003236",
+            // "serialNumber": "853000761",
+            "serverpath": "/opt/segger/jlink/JLinkGDBServer",
+            // "runToEntryPoint": "main",
+            "breakAfterReset": true,
+            "showDevDebugOutput": "raw",
+            // "rttConfig": {
+            //   "enabled": true,
+            //   "address": "auto",
+            //   "decoders": [
+            //     {
+            //       "port": 0,
+            //       "type": "console"
+            //     }
+            //   ]
+            // },
+            // "rtos": "FreeRTOS"
+        },
+        {
+            "name": "Debug cc2340r53 jlink openocd doesn't work, ti-openocd doesn't support jlink",
+            "cwd": "${workspaceFolder}",
+            "executable": "ti_ble.first_stage_bootloader_cc23xx.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "device": "CC2340R53",
+            "servertype": "openocd",
+            "serverpath": "/root/ti_openocd/bin/openocd",
+            "configFiles": [
+                "/root/ti_openocd/share/openocd/scripts/interface/jlink.cfg",
+                "/root/ti_openocd/share/openocd/scripts/board/ti_lp_em_cc2340r5.cfg"
+            ],
+            // "serialNumber": "853003236",
+            // "serialNumber": "853000761",
+            // "runToEntryPoint": "main",
+            "breakAfterReset": true,
+            "showDevDebugOutput": "raw",
+            // "rttConfig": {
+            //   "enabled": true,
+            //   "address": "auto",
+            //   "decoders": [
+            //     {
+            //       "port": 0,
+            //       "type": "console"
+            //     }
+            //   ]
+            // },
+            // "rtos": "FreeRTOS"
+        },
+        {
+            "name": "Debug cc2340r5 xds110 openocd",
+            "cwd": "${workspaceFolder}",
+            "executable": "ti_ble.first_stage_bootloader_cc23xx.hex",
+            "request": "launch",
+            "type": "cortex-debug",
+            "device": "cc2340r5",
+            "deviceName": "cc2340r5",
+            "servertype": "openocd",
+            "serverpath": "/root/ti_openocd/bin/openocd",
+            "configFiles": [
+                "/root/ti_openocd/share/openocd/scripts/interface/xds110.cfg",
+                "/root/ti_openocd/share/openocd/scripts/board/ti_lp_em_cc2340r5.cfg"
+            ],
+            "showDevDebugOutput": "none",
+            "rttConfig": {
+                "enabled": true,
+                "address": "auto",
+                "decoders": [
+                    {
+                        "port": 0,
+                        "type": "console"
+                    }
+                ]
+            },
+            "rtos": "FreeRTOS"
+        }
+    ]
+}
