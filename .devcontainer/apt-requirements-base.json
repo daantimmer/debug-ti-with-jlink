@@ -1,0 +1,7 @@
+{
+    "pkg-config": "1.8.1-2build1",
+    "libgtk-3-dev": "3.24.41-4ubuntu1.3",
+    "freeglut3-dev": "3.4.0-1build1",
+    "libusb-1.0-0": "2:1.0.27-1",
+    "libncurses-dev": "6.4+20240113-1ubuntu2"
+}
